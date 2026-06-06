@@ -9,5 +9,12 @@ pipeline{
                     url: 'https://github.com/Abhimanyu-Jadhav/Food-Order-System.git'
             }
         }
+
+        stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+            
+        }
     }
 }
